@@ -54,30 +54,21 @@ label welcome:
     #Announcer turns to N
     "They turned to me."
     X "Do you have any words to share with everybody?"
-    choice:
+    menu:
         "Try to be friendly":
             n "Hello everybody! My name is [n_name] and I'm really happy to be here!"
             n "I don't have a lot of experience with this kind of work, but I'll do my best!"
+            n "I'm really glad to be able to work with all of you."
             "Everyone looks at me silently."
             "Some people are smiling at me. I try to smile back."
             "This kind of thing might not really be for me. But I really need to leave a good impression."
             X "I like your cheerfulness."
-    n "I... I'm really glad to be able to work with all of you."
-    X "Ah, I see you aren't a person of much words."
-    X "That's okay. I'm sure you'll put all that energy and attention towards exploration out there."
-    X "I've received compelling information regarding a possible settlement on the far north, so hopefully your stay won't be too long."
-    X "With all that out of the way, let's get to eat, shall we?"
-    #now everyone is eating
-    n "How long has [announcer_name] been in charge of here?"
-    b "I don't know. They were here back when I arrived last year."
-    b "But we've had a lot of progress since then, you know? I'm sure they're a great leader."
-    n "I hope I can be liked by everyone as well..."
-    jump goodnight
-
-label goodnight:
-    #scene bg rooms
-    #show everyone in their pajamas
-    X "I'm sure you'll put all that energy and attention towards exploration out there."
+            X "I'm sure you'll work really hard out in the field."
+        "Just get over with it.":
+            n "Hey there."
+            n "I'm happy to be here."
+            X "Ah, I see you aren't a person of much words."
+            X "That's okay. I'm sure you'll put all that energy and attention towards exploration out there."
     X "I've received compelling information regarding a possible settlement on the far north, so hopefully your stay won't be too long."
     X "With all that out of the way, let's get to eat, shall we?"
     #now everyone is eating
@@ -128,7 +119,7 @@ label riseandshine:
     #show n in space suit
     "I'm really sleepy."
     "Did I wake up too early? [b_name] said they'd be there by now."
-    "And it's kind of tiresome to be standing here with this heavy suit on.""
+    "And it's kind of tiresome to be standing here with this heavy suit on."
     #if you were bold during the introduction?
     # show b
     "Out of nowhere, [b_name] appears behind me."
@@ -174,6 +165,9 @@ label vroom:
     #change scenes to the rover cg
     "The vehicle is much easier to handle than I expected, but still a bit difficult to steer."
     "I'm thankful that we're out here in the open, because otherwise I'm sure I'd have crashed into some obstacle."
+    "Every once in a while, [b_name] sticks a machine out and tells me where to head next."
+    b "As you can see, we're following a trail that was already there, placed by another exploration team."
+    b "The next time, we'll be making our own trail."
     b "I have to say, you're doing surprisingly well, for someone who just grabbed this for the first time."
     n "I usually learn things much faster by doing them."
     n "And I always want to do my best, whenever I can."
@@ -256,7 +250,7 @@ label deposit:
     b "Right here."
     "I slowly press the brakes, and [b_name] steps out of the vehicle."
     #show cg hatch
-    "A worn-out metal hatch sits on the ground. [b_name] steps on the edge, and it immediately opens."
+    "A worn-out, but large metal hatch sits on the ground. [b_name] steps on the edge, and it immediately opens."
     n "...That looks a little dangerous."
     # b chuckles
     b "Not that I'd be able to tell anyways."
@@ -283,7 +277,8 @@ label deposit:
     b "Anyways, can you help me put these in the cart?"
     b "Take care of not dropping them. They'd be ruined."
     "We finish loading the cart, and [b_name] presses a button."
-    "It quickly goes down along the side of the shaft, like it was dropped."
+    "It immediately goes down along the side of the shaft, like it was dropped."
+    "I struggle not to get sucked inside because of the air flow."
     "After a few seconds, it comes back up, and only the power cells are in it."
     n "Huh? You said it would take a few minutes."
     b "Well... it varies. But aren't you glad we didn't have to sit around waiting?"
@@ -293,7 +288,7 @@ label deposit:
 
 label cafe:
     "We go inside again, with our suits full of sand."
-    "[b_name] goes to put the power cells away, while I get ready to eat."    
+    "[b_name] goes to put the power cells away, while I get ready to eat."
     "I enter the cafeteria, and everyone is already getting prepared to eat."
     X "Please feel treat yourself to a plentiful meal. This last harvest was extremely successful, and it's all thanks to you."
     "I just sit down, and start eating in silence."
@@ -325,4 +320,99 @@ label flirt:
     jump sleeb
 
 label sleeb:
-    "
+    #scene bg bed and show n in their pajamas
+    "I can't believe [b_name] really said that."
+    "Is that how they really feel about me?"
+    "I covered my face with the blanket."
+    "I've only been here a few days, and yet things have gotten this awkward..."
+    "No, wait a second. I can't keep thinking like that."
+    "I'm going to do my best when working, and make them proud."
+    "That way, if they... {w}if they really want to be something else, they'll ask me directly."
+    "..."
+    "I sound so dumb it's embarrassing."
+    "I should probably just go to sleep. Tomorrow is another day, after all."
+    "Important matters are best discussed with a pillow, after all."
+    jump lost
+
+label lost:
+    #scene bg black
+    "I wake up a little later than yesterday, but still quite early."
+    #show bg outside here?
+    "After I'm done suiting myself up, I go outside, only to find [b_name] dozing off outside. While still wearing their suit."
+    "I gently kick nudge them with my foot, and they wake up with a jolt."
+    #show b
+    b "Oh, hey there!"
+    b "Have you been there for long?"
+    n "No, I just got here."
+    "I can tell they've barely slept."
+    b "We've got a large area to survey so let's get ready, shall we?"
+    "I nod and we get into the rover."
+    #scene bg rover"
+    "After a few minutes of driving, I can tell [b_name] is falling asleep again."
+    n "Hey, is it okay if I ask..."
+    n "You didn't sleep well yesterday, did you?"
+    "They seem to be a bit embarrassed about this question."
+    b "Not really..."
+    b "I was thinking about a lot of things."
+    n "Is that so?"
+    n "I wonder what's so important enough for you to lose your sleep."
+    n "Or should I say who?"
+    b "H-hey!"
+    b "I think..."
+    b "I think we should have this conversation some other time."
+    b "Do you mind handling the radio as you drive? I think I'm gonna take a nap in the back."
+    b "Wake me up if you get near the end of our map, okay?"
+    b "We haven't explored most of the area that's far in this direction."
+    "With that, they just laid down on the back of the rover."
+    "I'd be surprised if they can catch any sleep with all this movement."
+    "But it's not that bad. I really enjoy driving."
+    "In fact, I could spend all day doing it."
+    #scene sunset?
+    "[b_name] wakes up, slightly agitated."
+    b "Where are we?"
+    b "I don't think this is anywhere near the map we had."
+    n "Is that so?"
+    n "It all looks the same to me."
+    "[b_name] comes back to the front."
+    b "Haven't you been checking the map?!"
+    "I stop the vehicle immediately."
+    n "I'm sorry, I forgot."
+    "It doesn't feel like a valid excuse, even to me."
+    b "It's getting late."
+    b "How are we supposed to get back?"
+    n "I... don't know."
+    n "We could maybe turn around and follow the tracks?"
+    "[b_name] seems surprised."
+    b "That's... actually a good idea."
+    "They start looking around trying to orient themselves, then quickly panic."
+    b "We are not gonna make it."
+    n "Huh?"
+    b "My oxygen tank is at 30%%."
+    "I check mine. It was at 25%%."
+    n "Don't we have spare tanks?"
+    b "Yeah, but just a single one."
+    b "We'd have to go back as fast as we can, in a straight line, and even then..."
+    b "It's just a slim chance that we make it."
+    b "Especially if we are continuously sharing the tank."
+    n "What?"
+    "I felt my gut sinking inside me."
+    "Are we going to die out here? Because of my own incompetence?"
+    b "We have no time to lose."
+    b "Try to remain calm, so we don't waste any oxygen."
+    "I drive forward with all the power of the vehicle."
+    "After a few seconds, a loud metallic bang stops us completely."
+    b "What happened? Did you crash into something?"
+    "I'm scared for my life."
+    n "I did not!"
+    "I wonder if we're stranded."
+    "[b_name] gets out of the vehicle to check on it."
+    b "The front wheel is bust."
+    n "But we're out in the open. What could I have possible crashed into?"
+    "[They wipe out some dust from the surface, revealing a metallic plate underneath."
+    b "...I think you just crashed into a deposit hatch."
+    "As soon as they finish saying this, the hatch drops. We're falling underground."
+    jump fall
+
+label fall:
+    #have a cutscene where the rover and/or characters are shown falling as silhouettes
+    return
