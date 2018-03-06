@@ -415,4 +415,76 @@ label lost:
 
 label fall:
     #have a cutscene where the rover and/or characters are shown falling as silhouettes
+    #after they fall, the screen blacks out a bit, and slowly comes back in a dizzy way. 
+    "Where am I?"
+    "My entire body hurts."
+    "The last thing I remember is... I was exploring on the outside, and then we fell down a-"
+    #n stands up suddenly
+    "We fell down the deposit hatch!"
+    "I am surprised I'm not dead."
+    "I really hope [b_name] is okay."
+    "It's probably a good idea to start looking for them."
+    #n gets up and starts walking
+    "This place is quite dark, and it seems really complex."
+    "There is a faint cyan light to everything."
+    "I walk up to one of the machines, and I see a very large symbol on it."
+    "It's a symbol I've never seen before."
+    #show radioactive picture
+    "I wipe some of the dust that's covering it."
+    "Should I keep going this way, or go back to look for [b_name]?"
+    menu:
+        "Should I keep going this way, or go back to look for [b_name]?"
+        "Keep going.":
+            "What's the worst that could happen?"
+            "I'm not in danger."
+            "I don't want to run out of oxygen, so I should keep going if I want to find an exit sometime."
+            "It's not like this place will magically poison me, right?"
+            jump a_encounter
+        "Go back.":
+            "There's something about this place I don't like."
+            "It feels... dangerous."
+            "I take a step back and return to where I was before."
+            jump b_encounter
+
+label a_encounter:
+    "I didn't realize at first the scale of this place."
+    "There's machines as far as the eye can see."
+    "This is probably made from the ancient humans, isn't it?"
+    "I think [b_name] mentioned something like that."
+    "After a few minutes of walking, I find something that looks like a door, and I push it open."
+    "There's someone inside."
+    n "Hello?"
+    "They seem, understandably, quite startled."
+    a "Oh, hey."
+    a "Did you get lost?"
+    n "No?"
+    n "Well... yes."
+    n "I fell here from the surface."
+    n "Do you think we can go back?"
+    a "Oh, the surface!"
+    a "I haven't seen anyone from there in such a long time."
+    a "How is the exploration going?"
+    n "As far as I know, we haven't found anything."
+    n "But [announcername] said that we were close to finding something. So maybe we will."
+    a "Ah, I see."
+    a "You aren't alone here, are you?"
+    a "If I recall correctly, all the exploration is done in teams."
+    n "Yeah, there's someone else inside here, but..."
+    n "I lost them after falling down."
+    n "Do you think they'd be okay?"
+    a "I'm sure of it. You're okay as well, after all."
+    a "Let's go looking for them, shall we?"
+    "[a_name] grabs a small device which opens a door, and then we walk out of it."
+    jump a_talky
+
+label a_talky:
+    n "So..."
+    n "Are you the mechanic who takes care of these machines?"
+    "[a_name] thinks about it for a while."
+    a "Not really."
+    a "I'd say that the machines take care of me instead."
     return
+label b_encounter:
+    return
+
+ 
