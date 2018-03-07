@@ -1,3 +1,10 @@
+# Welcome to this code. It's not great, but it's mine, and I'm proud of it.
+
+# Message me at unicodepepper@gmail.com or at unicodepepper.tumblr.com/ask
+# if you have any questions or want to let me know something.
+
+
+
 define n = Character("Eileen",what_outlines=[(1,"#888",0,0)])
 define b = Character("Eileen",what_outlines=[(1,"#888",0,0)])
 #define t = Character("Eileen",what_outlines=[(1,"#888",0,0)]0)
@@ -12,6 +19,9 @@ define X = Character("Eileen",what_outlines=[(1,"#888",0,0)])
 
 
 label start:
+    python:
+        returned = None # 1 if you return to look for [b_name] while underground, 0 otherwise
+        follow = None # 1 if you followed the rover tracks after getting out from underground, 0 otherwise.
     jump veggies
 
 label veggies:
@@ -435,12 +445,14 @@ label fall:
     menu:
         "Should I keep going this way, or go back to look for [b_name]?"
         "Keep going.":
+            $returned=0
             "What's the worst that could happen?"
             "I'm not in danger."
             "I don't want to run out of oxygen, so I should keep going if I want to find an exit sometime."
             "It's not like this place will magically poison me, right?"
             jump a_encounter
         "Go back.":
+            $returned=1
             "There's something about this place I don't like."
             "It feels... dangerous."
             "I take a step back and return to where I was before."
@@ -483,8 +495,142 @@ label a_talky:
     "[a_name] thinks about it for a while."
     a "Not really."
     a "I'd say that the machines take care of me instead."
-    return
+    "I looked at them with a puzzled face."
+    n "How can a machine take care of you?"
+    n "Who takes care of it?"
+    a "I don't know. They just do."
+    a "I can do my job without problems, so I can't complain."
+    n "What's your job?"
+    a "I'm... a librarian."
+    a "I take care of the information that's stored here until the day where humans on the surface have a safe and permanent place to stay."
+    a "Until then, it's best for it all to be here."
+    n "What kind of information is it?"
+    "I unknowingly put my hand on a guard rail."
+    a "I'll have to explain to you later. It's probably a lot."
+    a "For now, try to stay away from the machines. They're radioactive."
+    menu:
+        "Radioactive?":
+            n "Radioactive? What does that mean?"
+            a "How to explain..."
+            a "Basically, they work by breaking matter down at an incredibly tiny scale."
+            a "What it means for you is that they'll slowly break you down from the inside if you stay too close, and then you'll die before you realize."
+            a "And there's nothing we can do about it." 
+            n "So ancient humans {i}did{/i} use magic after all..."
+            #a giggles
+            a "Oh, it's nothing like that."
+            a "Just... very advanced science."
+            n "Huh."
+        "Machines?":
+            a "Oh, yeah."
+            a "That's where we get energy from."
+            a "We have some minerals from the earth that break down with lots of energy. And we capture that to make energy."
+            n "I see..."
+            n "So ancient humans {i}did{/i} use magic after all..."
+            n "That explains how the power cells could go back charged so quickly."
+            a "Oh, it's nothing like that."
+            a "These machines were built by normal people, just like you and me."
+            n "Is that so?"
+    "We keep walking silently, and go through another hallway."
+    n "It still feels like magic to me."
+    jump a_finds_b
+
+label a_finds_b:
+    a "Isn't that your friend?"
+    "I look over. [b_name] is sitting inside the crashed rover, fiddling with its control panel."
+    b "Oh, there you are."
+    b "I was so worried about you."
+    b "You haven't been replying to my radio messages."
+    n "I didn't know I had a radio."
+    #change b's expression"
+    "[b_name] looks mildly annoyed."
+    b "Who is your friend? Do they live here?"
+    n "Oh, they are-{nw}"
+    a "I'm an archivist."
+    a "I'm keeping the legacy of humanity alive underground."
+    a "I see you're one of the explorers from the surface, right?"
+    a "[n_name] told me there hasn't been much progress."
+    a "And based on the state you two are in, I have a guess as to way."
+    #change b's expression
+    "[b_name] looks even more annoyed."
+    b "Hey, it's not our fault."
+    b "Accidents happen to anyone."
+    a "Don't sweat it."
+    jump library  
+
 label b_encounter:
+    "The layout here is rather confusing."
+    "I try to go back on my steps, but I end up going through another passage."
+    "I hear the sound of someone fiddling with keys from here, so I follow that."
+    "I quickly find the broken rover, and inside of it, [b_name]"
+    n "Hey."
+    "They stop fiddling with the controls."
+    b "Oh, [n_name]. I'm so relieved to know you're okay."
+    "They stand up and give me a tight hug. My heart is racing at this point."
+    n "T-thank you, I'm very relieved as well..."
+    n "Are we inside the deposit thing? This doesn't seem like a library..."
+    b "Well, I have heard that there's a library down here, though maybe it's somewhere else." 
+    n "Maybe it's not the time to go looking for it."
+    n "After all, we're running out of oxygen, and we need to return home."
+    b "Yeah, but the rover is bust."
+    b "We're going to need to walk anyways."
+    jump b_talky
+
+label b_talky:
+    #show b and n in underground hallway
+    "This place is a little scary..."
+    n "Hey."
+    "[b_name] turns to me."
+    n "Is it okay if you hold my hand?"
+    b "Y-yeah, sure!"
+    "They grab my hand a bit tightly and we keep walking."
+    n "I hope we don't get lost..."
+    b "Don't be silly, that's impossible."
+    b "How can we get lost if we already don't know where we are?"
+    "Thinking about it that way is even scarier."
+    n "Be honest with me."
+    n "Do you think we're going to die here?"
+    #b pauses
+    b "..."
+    b "That's a good question."
+    b "But I'd like to believe we're not."
+    b "After all, if we were going to die anyways, what do we lose for trying not to?"
+    n "I guess."
+    n "..."
+    n "Is there anyone you'd like to say goodbye to?"
+    b "I don't know."
+    b "Goodbyes are sad."
+    n "But they're better than nothing."
+    b "I guess."
+    b "..."
+    b "Do you love me?"
+    n "Eh?"
+    #n blushes
+    n "You're a very important person to me..."
+    b "I know, but... {w}I've been thinking about you lately, and... {w}even though we havne't known each other for much, I... {w}I think I..."
+    a "Who are you two?"
+    "A voice interrupts us from behind."
+    a "Are you lost?"
+    "We turn around, and there's someone staring at us."
+    a "You don't seem to be from around here."
+    "I try to speak, but [b_name] interrupts me."
+    b "No, we're from the surface."
+    b "We fell here because of an accident, and we're trying to get back."
+    b "Do you think you could help us?"
+    a "Yeah, of course."
+    a "Come with me."
+    jump library
+
+
+
+label library:
+    #show a, n and b without their suits. Also show the inside of the library/archive.
+    b "I have a quick question."
+    a "Huh?"
+    b "How come you're breathing without a suit?"
+    b "I thought the air outside was poisonous."
+    a "Well, we are inside right now."
+    #awkward looks
+    b "I guess that makes sense."
     return
 
  
