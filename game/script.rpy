@@ -624,6 +624,7 @@ label b_talky:
 
 label library:
     #show a, n and b without their suits. Also show the inside of the library/archive.
+    "[b_name] stops suddenly."
     b "I have a quick question."
     a "Huh?"
     b "How come you're breathing without a suit?"
@@ -631,6 +632,69 @@ label library:
     a "Well, we are inside right now."
     #awkward looks
     b "I guess that makes sense."
-    return
+    "[b_name] takes their helmet off. I follow suit."
+    b "What are we here for in the first place?"
+    a "I don't know... I think I was just curious about what life was like in the surface."
+    a "I've always dreamed of getting back to it, you know?"
+    a "I'm aware that they're not there anymore, but..."
+    a "I'd like to see the trees, and the rain, and the birds, and the beach..." 
+    a "All those precious human things that only exist in memories now."
+    a "Not warm ones."
+    a "Cold, hard, electric memories. But memories nonetheless."
+    b "What do you mean?"
+    a "I'm an archivist."
+    a "You probably don't know, but human history goes much farther than it seems." 
+    #start flashbacks
+    a "We're now just a handful, but a long time ago, there were thousands of millions of humans in this planet."   
+    a "Back when this planet was called Earth." 
+    a "They were a very advanced civilization. They had the power to modify their bodies, cure illnesses, fight back death."
+    a "They had the power to change the world, and they did. But instead of fighting death, they allied with her."
+    a "They fought each other, with weapons stronger than anything either of us can imagine."
+    a "Weapons so strong they turned the air into a smoldering fire, slowly breaking living flesh apart."
+    a "That's why we can't breathe outside."
+    a "That's why so few of us are left."
+    a "We, the ones who remain, are the descendants of a very small group of people, who feared this could be the end of humanity."
+    a "They harnessed this destructive force and used its energy to power everything we have today."
+    a "And to make sure this didn't happen again, they designated me, as well as many others who are scattered on this underground, to preserve the legacy of humanity." 
+    a "At least until the air is breathable again and you, the explorers, find a place where we can finally stay. 
+    #end flashbacks
+    b "..."
+    b "I think I need a minute to think about all of this."
+    n "How come none of us knew?"
+    a "I don't know."
+    "[a_name] chuckled a bit."
+    
+    a "It's a little ironic."
+    a "But I'm sure you'd have known eventually."
+    a "The machines are watching, after all. They never forget, as long as there's someone to look after them."
+    b "So what do we do now?"
+    "[b_name] interrupted suddenly."
+    b "Don't get me wrong, it has been amazing to talk to you, and I'd love to do it again sometime in the future."
+    b "But everyone back at the shelter must be extremely worried about you."
+    "Oh, no. I almost forgot about the shelter."
+    b "Do you have any way we could go back to it quickly?"
+    a "Hmmm... It depends."
+    a "Do you know of any deposit hatch close to your shelter?"
+    b "Yes, there's one."
+    b "Do you think you could take us there?"
+    a "Yeah, sure. Do you know which one? There's hundreds of them."
+    b "..."
+    b "I have no idea."
+    a "There's not much I can do, then."
+    a "..."
+    n "Do you think this would help?"
+    "I take out the map out of one of the pockets of my suit."
+    "The very same map I failed to look at, before causing all of this."
+    "[a_name] looks at it."
+    a "I can work with it."
+    a "Let's go."
+    jump escape
 
- 
+label escape:
+    return
+    
+    
+    
+    
+    
+    
