@@ -1,7 +1,9 @@
 # Welcome to this code. It's not great, but it's mine, and I'm proud of it.
 
 # Message me at unicodepepper@gmail.com or at unicodepepper.tumblr.com/ask
-# if you have any questions or want to let me know something.
+# if you have any questions or want to let me know something, or even just to say hi.
+
+# I appreciate human contact.
 
 
 
@@ -661,9 +663,9 @@ label library:
     b "..."
     b "I think I need a minute to think about all of this."
     n "How come none of us knew?"
-    a "I don't know."
-    "[a_name] chuckled a bit."
     
+    a "I don't know."
+    "[a_name] chuckled a bit."    
     a "It's a little ironic."
     a "But I'm sure you'd have known eventually."
     a "The machines are watching, after all. They never forget, as long as there's someone to look after them."
@@ -691,7 +693,86 @@ label library:
     jump escape
 
 label escape:
+    #show hallways underground
+    "We walk for a while through the hallways."
+    "This place is much larger and confusing than I had imagined." 
+    "If what [a_name] said is right, then they're not the only one down there."
+    "There must be many more archivists working with the machines, on the underground." 
+    "But there's no time to meet them all. We have to go back to the surface."
+    "After walking for a short time, we get to the bottom of another hatch."
+    a "I'm sure this is the place you're looking for."
+    #maybe a scene change?
+    a "After you're up there, it will only be a short walk back to your home shelter."
+    a "..."
+    b "So this is goodbye, huh?"
+    b "Do you think we'll ever see you again?"
+    a "Maybe."
+    a "But only if you work hard, and find a place where everyone can live."
+    a "Once you do, I'll be sure to find you."
+    "I'm holding back tears. Which is weird, because I've never been too emotional."
+    if returned:
+        "An alarm sounds in the distance."
+        n "What's that?"
+        a "I don't know, but don't worry about it."
+        a "I'll take care of it once I know you two are safe up there."
+    n "We still have so much to talk about, you know?"
+    n "I'm going to miss you."
+    a "I know, [n_name]. But it's for the best."
+    a "You might want to lie down instead of standing up, by the way."
+    "[b_name] and I comply, and recline in our backs on the platform."
+    a "Do your best out there."
+    jump surfacing
+
+label surfacing:
+    "Immediately, the platform starts moving upwards extremely fast."
+    "I can feel my vision blurring."
+    "Before I can lose my consciousness, we get to the surface."
+    "I check my oxygen level. 15%."
+    b "There's no time to lose."
+    "[b_name] stands up before me and starts walking towards the shelter, which is visible in the distance."
+    "I don't know why, but something about it feels odd."
+    "I just walk as fast as I can."
+    n "Hey, [b_name]..."
+    "It's hard to keep the rhythm. I'm panting between words."
+    n "What are we?"
+    "[b_name] looks at me and stops for a second."
+    b "We can talk about that later, okay?" 
+    b "I just want to keep you safe."
+    b "You... are very important to me." 
+    "Without waiting for me to answer, they keep running along."
+    #change of scenes."
+    "We finally arrive to the shelter, and [b_name] goes to open the door."
+    "But it doesn't budge."
+    b "Hey, [n_name]..."
+    b "I think the airlock is jammed."
+    n "Is there no one inside?"
+    "[b_name] walks around the walls of the shelter."
+    b "Oh my god..."
+    n "What happened?"
+    #scene change
+    b "This airlock... it's completely destroyed."
+    n "Do you think there's anyone left inside?"
+    b "..."
+    b "The air is poisonous."
+    b "If they had time to put on a suit, they'd be smart enough not to just stay inside."
+    b "If they didn't have time..."
+    b "They all would be dead."
+    "We stared at the entrance in horror."
+    menu:
+        "Should we go inside?"
+        "Go inside and see what remains":
+            jump inside_endings
+        "Go outside and look for survivors":
+            jump outside_endings
+
+
+
+label inside_endings:
     return
+
+label outside_endings:
+    return
+    
     
     
     
