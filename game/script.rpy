@@ -597,7 +597,7 @@ label b_talky:
     b "That's a good question."
     b "But I'd like to believe we're not."
     b "After all, if we were going to die anyways, what do we lose for trying not to?"
-    n "I guess."_name] walks out i
+    n "I guess."
     n "..."
     n "Is there anyone you'd like to say goodbye to?"
     b "I don't know."
