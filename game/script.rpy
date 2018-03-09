@@ -659,7 +659,7 @@ label library:
     a "We, the ones who remain, are the descendants of a very small group of people, who feared this could be the end of humanity."
     a "They harnessed this destructive force and used its energy to power everything we have today."
     a "And to make sure this didn't happen again, they designated me, as well as many others who are scattered on this underground, to preserve the legacy of humanity." 
-    a "At least until the air is breathable again and you, the explorers, find a place where we can finally stay. 
+a "At least until the air is breathable again and you, the explorers, find a place where we can finally stay."
     #end flashbacks
     b "..."
     b "I think I need a minute to think about all of this."
@@ -740,7 +740,7 @@ label surfacing:
     b "I just want to keep you safe."
     b "You... are very important to me." 
     "Without waiting for me to answer, they keep running along."
-    #change of scenes."
+    #change of scenes.
     "We finally arrive to the shelter, and [b_name] goes to open the door."
     "But it doesn't budge."
     b "Hey, [n_name]..."
@@ -846,7 +846,7 @@ label b_inside_ending:
     n "I love you too."
     "The air burns my insides very faintly, and makes me feel lightheaded."
     #everything becomes blurrier#
-    "I run my fingers through [b_name]'s hair one last time, before everything goes away.
+    "I run my fingers through [b_name]'s hair one last time, before everything goes away."
     
     #SCENE CHANGE - they're in the ground and it's now raining
     
