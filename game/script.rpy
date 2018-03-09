@@ -503,8 +503,9 @@ label a_talky:
     a "I don't know. They just do."
     a "I can do my job without problems, so I can't complain."
     n "What's your job?"
-    a "I'm... a librarian."
-    a "I take care of the information that's stored here until the day where humans on the surface have a safe and permanent place to stay."
+    a "I'm... an archivist."
+    a "I monitor you and all the other people in the surface from here, and keep track of everything that happens."
+    a "I also take care of the historical information that's stored here until the day where humans on the surface have a safe and permanent place to stay."
     a "Until then, it's best for it all to be here."
     n "What kind of information is it?"
     "I unknowingly put my hand on a guard rail."
@@ -596,7 +597,7 @@ label b_talky:
     b "That's a good question."
     b "But I'd like to believe we're not."
     b "After all, if we were going to die anyways, what do we lose for trying not to?"
-    n "I guess."
+    n "I guess."_name] walks out i
     n "..."
     n "Is there anyone you'd like to say goodbye to?"
     b "I don't know."
@@ -662,8 +663,8 @@ label library:
     #end flashbacks
     b "..."
     b "I think I need a minute to think about all of this."
-    n "How come none of us knew?"
-    
+
+    n "How come none of us knew?"    
     a "I don't know."
     "[a_name] chuckled a bit."    
     a "It's a little ironic."
@@ -710,11 +711,10 @@ label escape:
     a "But only if you work hard, and find a place where everyone can live."
     a "Once you do, I'll be sure to find you."
     "I'm holding back tears. Which is weird, because I've never been too emotional."
-    if returned:
-        "An alarm sounds in the distance."
-        n "What's that?"
-        a "I don't know, but don't worry about it."
-        a "I'll take care of it once I know you two are safe up there."
+    "An alarm sounds in the distance."
+    n "What's that?"
+    a "I don't know, but don't worry about it."
+    a "I'll take care of it once I know you two are safe up there."
     n "We still have so much to talk about, you know?"
     n "I'm going to miss you."
     a "I know, [n_name]. But it's for the best."
@@ -727,7 +727,7 @@ label surfacing:
     "Immediately, the platform starts moving upwards extremely fast."
     "I can feel my vision blurring."
     "Before I can lose my consciousness, we get to the surface."
-    "I check my oxygen level. 15%."
+    "I check my oxygen level. 15%%."
     b "There's no time to lose."
     "[b_name] stands up before me and starts walking towards the shelter, which is visible in the distance."
     "I don't know why, but something about it feels odd."
@@ -768,7 +768,120 @@ label surfacing:
 
 
 label inside_endings:
+    "We choose to go inside."
+    #change of scenes
+    n "The floor is covered in dust from outside."
+    n "It's clear that the airlock has been broken for a long time."
+    "[b_name] goes directly to the greenhouse."
+    #another scene change?
+    b "The plants..."
+    b "They're all okay..."
+    "[b_name] puts their hand tenderly on one of them."
+    b "My plants..."
+    "A beep from my suit interrupted them."
+    n "My oxygen is running out..."
+    b "Wait a second. There are some oxygen tanks in storage in the back." 
+    b "Wait a second here. Don't spend much air."
+    "[b_name] walks out in a hurry."
+    "I try to calm down, but I'm still shaking."
+    #another scene change (just dark and back)
+    "After rustling on the storage for a while, [b_name] comes back to me."
+    b "This can't be..."
+    b "They're all empty."
+    b "And it seems that no one is here."
+    "Their suit beeps this time."
+    n "What happened here?"
+    n "Are we going to die?"
+    "[b_name] just walks out of the greenhouse. I follow them."
+    #scene change (this time outside)
+    n "Hey, [n_name]."
+    n "I'm so sorry this happened."
+    b "It's okay."
+    b "It's not your fault, you know?"
+    n "I..."
+    n "I think it is."
+    n "I made us get lost outside."
+    b "Bullshit."
+    b "Do you think you could have prevented this?"
+    b "We would have just died sooner."
+    b "And this way, we at least got to see what's underground."
+    b "And we got to know the story of this planet."
+    b "And we got to know that there's more people like us out there."
+    b "I think that's worth it."
+    n "I'm sorry."
+    n "I'm sorry I'm so negative."
+    b "Don't worry about it."
+    "Both of our suits are now at a critically low level of oxygen."
+    b "You're very important to me, [n_name]."
+    b "I've wanted to say this since a long time ago, but I... {w}I think I..."
+    if not returned:
+        jump a_inside_ending
+    else:
+        jump b_inside_ending
+
+label a_inside_ending:
+    
+
+
+label b_inside_ending:
+    b "I think I love you."
+    b "I've been feeling this way towards you almost since we met."
+    b "And, even though it's been so little time, if we really have no option but to die here..."
+    b "I want to die by your side."
+    b "I want to be with you until the end."
+    n "I... I love you too, [b_name]."
+    n "Being with you has made me really happy."
+    n "I just wish it didn't have to end so fast."
+    "I lean closer to them."
+    b "Would you... {w}would you kiss me right now?"
+    b "That's all I want."
+    "Before I answer, they take their helmet off."
+    "The air outside the suit can't be breathed, right?"
+    "But so does the air inside of it, once it has run out of oxygen."
+    "I take my helmet out as well."
+    "The air is extremely hot."
+    "I hold my breath, as [b_name] holds my cheeks, then kisses my lips."
+    b "I love you so much."
+    "[b_name] starts breathing again, and so do I."
+    n "I love you too."
+    "The air burns my insides very faintly, and makes me feel lightheaded."
+    #everything becomes blurrier#
+    "I run my fingers through [b_name]'s hair one last time, before everything goes away.
+    
+    #SCENE CHANGE - they're in the ground and it's now raining
+    
+    "It's already night."
+    "I'm still feeling a bit lightheaded, but I'm surprisingly very much alive."
+    "I wake up from the feeling of water dripping in my face."
+    "After I open my eyes, I realize the water is pouring everywhere."
+    "[b_name] is right besides me. Asleep, but breathing."
+    n "Hey, [b_name]."
+    "I nudge them slightly."
+    n "There's water everywhere."
+    "They wake up."
+    b "Water? Where did it come from?"
+    n "I don't know. It was falling from the sky when I woke up."
+    n "And we're alive."
+    b "We are alive..."
+    b "Wasn't the air toxic?"
+    n "I don't know. But I'm breathing it. And I'm alive."
+    "With a sudden realization, [b_name] stands up and runs inside then comes back with two large containers."
+    b "This water from the sky might be useful in the future, don't you think?"
+    n "But what if it's dangerous?"
+    b "I don't know, we could test for it using some of the leftover equipment."
+    b "Besides, the air was supposed to be dangerous, and here we are."
+    b "By the way, can you help me taking the roof off the greenhouse?"
+    b "The irrigation system must be empty already."
+    b "I'm sure this water will be great for the plants as well."
+    "I climb onto the roof of the shelter for the first time in my life, and lift open the top windows on the greenhouse."
+    "The wet ground, now a dark brown, stretches far into the horizon, under the light rain."
+    "After I finish, I come back and sit besides [b_name] in the ground, holding their hand."
+    b "This is our world now."
+    b "And I want to shape it with you."
+    #jump credits
+    #ALSO change the main menu to a cute image of them lying down under the stars together <3
     return
+
 
 label outside_endings:
     return
