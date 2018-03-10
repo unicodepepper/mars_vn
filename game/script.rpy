@@ -820,7 +820,44 @@ label inside_endings:
         jump b_inside_ending
 
 label a_inside_ending:
-    
+    #bang
+    "A rumbling sound in the distance interrupts us."
+    b "What's that?"
+    "The earth starts shaking for a moment, and then suddenly stops."
+    n "I have no idea. But it was really scary."
+    a "I don't think I'm scary."
+    n "[a_name]? Was that you?"
+    n "What are you doing here?"
+    a "No, that wasn't me."
+    a "That was the planet. And it didn't start just now."
+    a "Aren't you wondering why everyone fled from the shelter while you two were gone? Or why I'm not wearing a suit?"
+    "I look at [b_name], then at my depleted oxygen meter, then back at [a_name]."
+    "I take off my helmet."
+    "The air is really hot, and it burns slightly when I breathe. But I can breathe."
+    "At least more than I could in the stale air that was building up inside my suit."
+    "[b_name] does the same."
+    b "So this means that the air being poisonous was a lie?"
+    a "No. But it has slowly gone back to normal."
+    a "Slowly until last week, of course - this process, which was estimated to take place across centuries, suddenly happened in a matter of days."
+    n "So what do we do now?"
+    a "Anything we want."
+    a "There's no reason to leave this place. There are medical supplies, tools, and even plants we can put outside for the rain."
+    a "I'm sure the other ones have done similar things as well."
+    a "After we've settled down a bit, we can go look for the people who fled this shelter. I'm sure they'll do the same elsewhere."
+    "Suddenly, [b_name] started crying, and hugged us both."
+    b "I can't believe this..."
+    b "I'm so happy to be alive."
+    b "I'm so happy to see you two again."
+    b "I'm so happy to be here."
+    "I hugged them back. [a_name]'s face was warm from the sun."
+    n "Hey, [a_name]."
+    n "What's the rain?"
+    "They chuckled."
+    a "Don't worry, sweetheart."
+    a "I'm sure you'll get to see it soon."
+    #jump credits
+    #also change the main menu to the three of them chilling in the sun
+    return
 
 
 label b_inside_ending:
@@ -877,7 +914,7 @@ label b_inside_ending:
     "The wet ground, now a dark brown, stretches far into the horizon, under the light rain."
     "After I finish, I come back and sit besides [b_name] in the ground, holding their hand."
     b "This is our world now."
-    b "And I want to shape it with you."
+    b "And I want to rebuild it with you."
     #jump credits
     #ALSO change the main menu to a cute image of them lying down under the stars together <3
     return
