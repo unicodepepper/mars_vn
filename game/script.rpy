@@ -203,25 +203,41 @@ label vroom:
     b "We {i}could{/i} get past it, but it's so far away that there would be not enough oxygen to bring everyone across."
     b "I've heard there is a very habitable zone after that, which could mean that we won't need oxygen suits anymore."
     b "But it's a huge risk to take. And if we're wrong, we won't have enough to go back to the shelter, and everyone will die."
-    b "In fact, you might have noticed that your tank is almost at 50%%."
+    b "In fact, you might have noticed that your oxygen tank is almost at 60%%. And it will be well past 50%% once we are actually there."
     b "Let's return to the shelter, okay?"
     n "..."
     b "Is something wrong?"
     n "Oh, not at all."
     n "I'm sorry."
     "I start driving and turn the vehicle around."
+    "After a few minutes, I notice it's getting harder to control."
+    n "Hey, is something wrong with the vehicle? I can't seem to be able to steer it around."
+    b "I don't know. I can't remember anything like that happening with them."
+    b "Maybe you could try going a little slower? That way, you'll have more time to steer back when-{nw}"
+    "I brake suddenly when reaching a cliff."
+    "It's too late, since the vehicle seems to be tilting forward."
+    n "...I think it's a good idea to get out now."
+    #scene change - they're both looking down the ravine at the crashed vehicle
+    n "Oh my god..."
+    n "I'm so sorry..."
+    b "Don't sweat about it."
+    b "They're pretty tough, so we can recover it later."
+    n "But doesn't it have anything important inside?"
+    b "Just two backup oxygen tanks, but we won't need those."
+    b "We're close enough to go back on our feet, after all."
+    b "Let's go."
     jump harvest
 
 label harvest:
     #scene bg greenhouse
     "We went through the airlock fairly quickly after returning."
-    "Despite having such a heavy suit on during the long trip, I didn't feel exhausted at all."
+    "Despite having such a heavy suit on during the long walk back, I didn't feel exhausted at all."
     "Probably because of how excited I am."
     b "What did you think about our small trip?"
     n "It was... beautiful."
-    n "But also a bit scary."
+    n "But also really scary."
     b "Don't worry, you get used to it."
-    b "And I'll make sure you don't get hurt"
+    b "And I'll make sure you don't get hurt the next time."
     #n blushes THIS TIME THE GOOD WAY
     #b giggles
     b "Remember those plants I showed you yesterday? The ones that were almost ripe."
@@ -311,11 +327,12 @@ label flirt:
     "I leave the cafeteria, and find [b_name] in the hallway."
     n "Oh, hey."
     n "You seem exhausted."
-    b "Yeah, I've been installing batteries all over the place."
+    b "Yeah, I've been installing power cells all over the place."
     b "But don't worry, I already had something to eat."
-    n "I... I wanted to say sorry for making you late today."
-    n "It's probably a chore to be teaching me all the time."
-    b "Oh, it's okay. It's not really a big deal?"
+    n "I... I wanted to say sorry for what happened today."
+    n "It was all my fault for not being responsible."
+    b "Oh, it's okay. It's not really a big deal."
+    b "I'm sure we'll be able to recover that rover shortly."
     b "Besides, I really like going exploring with you, you know?"
     b "And explaining things to you... {w}and talking to you... {w}and working with you.. {w}and.." #N blushes proggressively
     n "D-do you mean-"
@@ -646,6 +663,7 @@ label library:
     a "Cold, hard, electric memories. But memories nonetheless."
     b "What do you mean?"
     a "I'm an archivist."
+
     a "You probably don't know, but human history goes much farther than it seems." 
     #start flashbacks
     a "We're now just a handful, but a long time ago, there were thousands of millions of humans in this planet."   
@@ -663,7 +681,6 @@ a "At least until the air is breathable again and you, the explorers, find a pla
     #end flashbacks
     b "..."
     b "I think I need a minute to think about all of this."
-
     n "How come none of us knew?"    
     a "I don't know."
     "[a_name] chuckled a bit."    
@@ -836,6 +853,8 @@ label a_inside_ending:
     "The air is really hot, and it burns slightly when I breathe. But I can breathe."
     "At least more than I could in the stale air that was building up inside my suit."
     "[b_name] does the same."
+    a "I came out because my mission underground is complete."
+    a "A permanent settlement has been found already, and we can stay on the surface again."
     b "So this means that the air being poisonous was a lie?"
     a "No. But it has slowly gone back to normal."
     a "Slowly until last week, of course - this process, which was estimated to take place across centuries, suddenly happened in a matter of days."
@@ -921,7 +940,64 @@ label b_inside_ending:
 
 
 label outside_endings:
-    return
+    #scene change to outside the shelter
+    "We go outside and start looking around."
+    b "Hey, there are a bunch of rover tracks around here."
+    b "They're pretty violent, so whoever left here did to in a hurry."
+    b "I think we should follow them. They can't go that far, can they?"
+    n "I don't know."
+    n "But it's probably our best bet."
+    "They grab my hand and start walking."
+    "After we reach the top of a hill, we realize how long it will actually be."
+    b "The rover tracks go all the way to the wall of rock."
+    b "We'll never arrive there by foot, especially on this level of oxygen."
+    n "I see..."
+    n "But aren't there two oxygen tanks left."
+    b "Huh? Where?"
+    n "Remember the rover I crashed the other day?"
+    n "It must be still in that ravine, right?"
+    #b is surprised
+    b "..."
+    b "[n_name], you're a genius."
+    b "Let's go."
+    
+    #scene change to the ravine
+    
+    "After walking for a short while, we arrived at it."
+    n "Did something happen here? Some of the walls have collapsed."
+    b "I don't know what it could be, but I know it makes for a very convenient ramp."
+    b "Can you help me turn this rover around?"
+    
+    #scene change
+    b "Hmph!"
+    
+    "After some effort from us, the rover is back into its wheels."
+    "I get into the driver seat, and start driving."
+    n "The steering is still a bit hard."
+    b "But we have a vehicle."
+    n "That's true."
+    "While [b_name] gets the oxygen tanks from the trunk, I maneuver out of the ravine, and start following the tracks again."
+    b "What do you think we will find at the end of the tracks? A new shelter? Maybe a permanent settlement?"
+    b "Or maybe a deep pit where everyone fell into? Or maybe they ran out of oxygen, and..."
+    n "I don't think this is the right moment to talk about this."
+    "The lighthearted atmosphere is far gone."
+    "After reaching the rock wall, I climb it through a narrow zig zag pathway, following closely the previous tracks."
+    if not returned:
+        jump a_outside_ending
+    else:
+        jump b_outside_ending
+
+label a_outside_ending:
+    #scene change: sea in the horizon with a besides a rover
+    b "What's that in the horizon?"
+    b "I've never seen anything like that."
+    "I try to answer, but a voice cuts me off."
+    a "Hey, friends! I thought I wouldn't see you around here!"
+    "[a_name] gets out of their vehicle and walks towards us."
+    a "I was so worried, I was about to go to your old shelter to check on you."
+    a "I thought you hadn't made it."
+    a "Don't you want to see the new place?"
+    
     
     
     
