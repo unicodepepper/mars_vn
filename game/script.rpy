@@ -988,7 +988,7 @@ label outside_endings:
         jump b_outside_ending
 
 label a_outside_ending:
-    #scene change: sea in the horizon with a besides a rover
+    #scene change: sea in the horizon with A besides a rover
     b "What's that in the horizon?"
     b "I've never seen anything like that."
     "I try to answer, but a voice cuts me off."
@@ -997,6 +997,37 @@ label a_outside_ending:
     a "I was so worried, I was about to go to your old shelter to check on you."
     a "I thought you hadn't made it."
     a "Don't you want to see the new place?"
+    "I'm speechless."
+    b "New place?"
+    a "Yeah, where everyone went."
+    a "It's something really amazing. Everyone moved in as soon as we found out."
+    b "Let's go, then."
+    
+    #black scene with rover sounds
+    
+    #scene where they're sitting on the beach (seen from slightly afar - there's a shelter a bit to the side)
+    n "That's a lot of water."
+    a "Yeah. It's the sea."
+    n "I've never heard of it before..."
+    n "Has this always been here?"
+    a "Not really."
+    a "But while you were away, there was a huge change in this planet."
+    a "I don't know why, but a process that should have taken centuries ended up happening in a matter of days."
+    a "And now we have this. And we can breathe."
+    a "Say, do you want to go into the water?"
+    a "I'm sure it will be fun."
+    "[b_name] is fast asleep."
+    n "Sure, why not?"
+    #jump credits
+    #change main menu to them playing in the water
+    return
+
+label b_outisde_ending:
+    #scene change: just sea in the horizon
+    b "What's that in the horizon?"
+    b "I've never seen anything like that."
+    n "I think it looks like... water."
+    n "Lots of it." 
     
     
     
