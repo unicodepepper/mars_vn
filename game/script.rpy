@@ -677,7 +677,7 @@ label library:
     a "We, the ones who remain, are the descendants of a very small group of people, who feared this could be the end of humanity."
     a "They harnessed this destructive force and used its energy to power everything we have today."
     a "And to make sure this didn't happen again, they designated me, as well as many others who are scattered on this underground, to preserve the legacy of humanity." 
-a "At least until the air is breathable again and you, the explorers, find a place where we can finally stay."
+    a "At least until the air is breathable again and you, the explorers, find a place where we can finally stay."
     #end flashbacks
     b "..."
     b "I think I need a minute to think about all of this."
