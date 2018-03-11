@@ -1028,10 +1028,32 @@ label b_outisde_ending:
     b "I've never seen anything like that."
     n "I think it looks like... water."
     n "Lots of it." 
+    "We stare at it in awe, and I keep driving in silence."
     
+    #scene change to the new refuge
     
-    
-    
+    "Before we can find a proper place to stop, a familiar voice stops us."
+    X "There you are, my children!"
+    X "I'm so delighted to see you."
+    X "I thought you had lost the way completely, and I'd never see you again."
+    X "What happened to you? Where were you?"
+    b "Oh, that's quite the story."
+    b "We fell down a deposit hatch, and it was a pain to get back."
+    b "I'm frankly surprised we're still alive."
+    b "How about you? What happened while we were away?"
+    X "There was a huge earthquake that broke the shelter."
+    X "We were preparing to evacuate as an emergency, when I received a message saying that a safe location had been discovered towards here."
+    X "Turns out the earthquake was caused by this."
+    #pan to the sea
+    X "An enormous amount of water rushed inland, from an area we hadn't even explored yet."
+    X "And that helped make the air breathable again."
+    X "Naturally, we rushed to move here as soon as possible." 
+    X "We're still working on a few things, but I'm sure we can permanently settle here."
+    X "Do you want to join us for dinner?"
+    #jump credits
+    #change the main menu to them in the sunset
+    #i might write more here
+    return
     
     
     
