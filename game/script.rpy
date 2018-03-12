@@ -188,7 +188,7 @@ label vroom:
     "That comment caught me off guard."
     n "W-what?"
     b "Ah, nothing, nothing."
-    b "Let's just focus on the focus."
+    b "Let's just focus on the road."
     #another scene change to the cliff
     b "Hey."
     "[b_name] breaks my concentration."
@@ -214,9 +214,9 @@ label vroom:
     n "Hey, is something wrong with the vehicle? I can't seem to be able to steer it around."
     b "I don't know. I can't remember anything like that happening with them."
     b "Maybe you could try going a little slower? That way, you'll have more time to steer back when-{nw}"
-    "I brake suddenly when reaching a cliff."
-    "It's too late, since the vehicle seems to be tilting forward."
-    n "...I think it's a good idea to get out now."
+    "I brake suddenly when going downhill."
+    "It's too late, since the vehicle is already rolling on its side."
+    "Thankfully, [b_name] and I get to jump out of it before it crashes."
     #scene change - they're both looking down the ravine at the crashed vehicle
     n "Oh my god..."
     n "I'm so sorry..."
