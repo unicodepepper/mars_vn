@@ -258,7 +258,7 @@ label harvest:
     b "Yeah, depositing."
     n "So you'll be able to eat them later?"
     b "Not really."
-    b "I'll explain to you if you help me get them outside."
+    b "I'll explain to you if you help me get them out."
     "I grab a bag and start placing the plants I harvest in it."
     "It's a bit monotonous, but much easier than working outside."
     jump deposit
