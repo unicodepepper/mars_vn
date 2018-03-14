@@ -1022,7 +1022,7 @@ label a_outside_ending:
     #change main menu to them playing in the water
     return
 
-label b_outisde_ending:
+label b_outside_ending:
     #scene change: just sea in the horizon
     b "What's that in the horizon?"
     b "I've never seen anything like that."

@@ -1,0 +1,55 @@
+indispensable:
+bg greenhouse at day
+bg cafeteria
+bg rooms (hallway?)
+cg lying in bed
+bg right outside shelter (showing the airlock and a rover)
+cg rover moving (and in opposite direction)
+cg faraway rock wall (and with tracks)
+cg hatch (closed and open)
+
+nice:
+cg announcer speaking
+cg looking down at the crashed rover
+cg loading bags
+cg falling down
+
+
+
+
+U N D E R G R O U N D 
+
+indispensable:
+bg hatch bottom
+bg archive
+bg machines hallway (panoramic? or maybe looping?)
+cg b on the rover
+
+nice:
+bg archivist bedroom
+bg radioactive machine
+
+
+
+B A C K (sky is blue now) 
+
+indispensable:
+broken versions of:
+-bg right outside shelter 
+-bg rooms/hallway
+
+cg sitting down in the ruins outside 
+-without helmets
+-with a in it
+-at night
+
+cg kiss
+
+cg above the wall (with/without a's rover)
+cg they're all in the water
+bg new city
+
+nice:
+cg running outside
+bg greenhouse
+cg on top of the greenhouse
